@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B6MAORcMkvsyfZlDEtwa6CoVRDKdqRWVhoxVfyUqCsmeiIPzoWYsujt9AmrJ5h8CLDjrKrURJ0suDzSHP5g/Dg==",
+  "dgSpecHash": "b2MSVjYdDo3AsvJwq1kRyHk0CoLjyz6xU4r4OoYj/4ph84Nfdwxd03A/DQzMN9HupovXiOcJ+2ooxHmag/FrtQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Karen Ono\\Documents\\CPD\\NET\\Property\\src\\Property.ApplicationCore\\Property.ApplicationCore.csproj",
+  "projectFilePath": "C:\\Users\\onoka\\Documents\\property\\src\\Property.ApplicationCore\\Property.ApplicationCore.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -7,3 +7,18 @@ C:\Users\Karen Ono\Documents\CPD\NET\Property\src\Property.Infrastructure\obj\De
 C:\Users\Karen Ono\Documents\CPD\NET\Property\src\Property.Infrastructure\obj\Debug\netcoreapp3.1\Property.Infrastructure.csproj.CoreCompileInputs.cache
 C:\Users\Karen Ono\Documents\CPD\NET\Property\src\Property.Infrastructure\obj\Debug\netcoreapp3.1\Property.Infrastructure.dll
 C:\Users\Karen Ono\Documents\CPD\NET\Property\src\Property.Infrastructure\obj\Debug\netcoreapp3.1\Property.Infrastructure.pdb
+C:\Users\onoka\Documents\property\src\Property.Infrastructure\bin\Debug\netcoreapp3.1\Property.Infrastructure.deps.json
+C:\Users\onoka\Documents\property\src\Property.Infrastructure\bin\Debug\netcoreapp3.1\Property.Infrastructure.runtimeconfig.json
+C:\Users\onoka\Documents\property\src\Property.Infrastructure\bin\Debug\netcoreapp3.1\Property.Infrastructure.runtimeconfig.dev.json
+C:\Users\onoka\Documents\property\src\Property.Infrastructure\bin\Debug\netcoreapp3.1\Property.Infrastructure.dll
+C:\Users\onoka\Documents\property\src\Property.Infrastructure\bin\Debug\netcoreapp3.1\Property.Infrastructure.pdb
+C:\Users\onoka\Documents\property\src\Property.Infrastructure\bin\Debug\netcoreapp3.1\Property.ApplicationCore.dll
+C:\Users\onoka\Documents\property\src\Property.Infrastructure\bin\Debug\netcoreapp3.1\Property.ApplicationCore.pdb
+C:\Users\onoka\Documents\property\src\Property.Infrastructure\obj\Debug\netcoreapp3.1\Property.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\onoka\Documents\property\src\Property.Infrastructure\obj\Debug\netcoreapp3.1\Property.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\onoka\Documents\property\src\Property.Infrastructure\obj\Debug\netcoreapp3.1\Property.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\onoka\Documents\property\src\Property.Infrastructure\obj\Debug\netcoreapp3.1\Property.Infrastructure.AssemblyInfo.cs
+C:\Users\onoka\Documents\property\src\Property.Infrastructure\obj\Debug\netcoreapp3.1\Property.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\onoka\Documents\property\src\Property.Infrastructure\obj\Debug\netcoreapp3.1\Property.Infrastructure.dll
+C:\Users\onoka\Documents\property\src\Property.Infrastructure\obj\Debug\netcoreapp3.1\Property.Infrastructure.pdb
+C:\Users\onoka\Documents\property\src\Property.Infrastructure\obj\Debug\netcoreapp3.1\Property.Infrastructure.genruntimeconfig.cache
