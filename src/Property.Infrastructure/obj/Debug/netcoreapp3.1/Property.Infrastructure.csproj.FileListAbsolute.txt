@@ -19,6 +19,7 @@ C:\Users\onoka\Documents\property\src\Property.Infrastructure\obj\Debug\netcorea
 C:\Users\onoka\Documents\property\src\Property.Infrastructure\obj\Debug\netcoreapp3.1\Property.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\onoka\Documents\property\src\Property.Infrastructure\obj\Debug\netcoreapp3.1\Property.Infrastructure.AssemblyInfo.cs
 C:\Users\onoka\Documents\property\src\Property.Infrastructure\obj\Debug\netcoreapp3.1\Property.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\onoka\Documents\property\src\Property.Infrastructure\obj\Debug\netcoreapp3.1\Property.Infrastructure.csproj.CopyComplete
 C:\Users\onoka\Documents\property\src\Property.Infrastructure\obj\Debug\netcoreapp3.1\Property.Infrastructure.dll
 C:\Users\onoka\Documents\property\src\Property.Infrastructure\obj\Debug\netcoreapp3.1\Property.Infrastructure.pdb
 C:\Users\onoka\Documents\property\src\Property.Infrastructure\obj\Debug\netcoreapp3.1\Property.Infrastructure.genruntimeconfig.cache
