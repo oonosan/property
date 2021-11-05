@@ -21,12 +21,13 @@ namespace Property.WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddCors();
 
             // Connect to database
             string connectionString = _config.GetConnectionString("DefaultConnection");
             services.AddDbContext<PropertyDbContext>(options =>
             {
-                options.UseNpgsql(_config.GetConnectionString("DefaultConnection"));
+                options.UseNpgsql(connectionString);
             });
         }
 
@@ -42,6 +43,8 @@ namespace Property.WebAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200"));
 
             // used to enable authentication and then subsequently allow authorization
             // app.UseAuthentication();
