@@ -4,7 +4,7 @@ Hi! This project is built with .NET Core and Angular.
 
 
 ## Architecture
-![alt text](https://github.com/image.jpg?raw=true)
+![alt text](https://github.com/oonosan/property/blob/main/img/Clean%20architecture.png?raw=true)
 
 Within this solution there are five projects:
  - Property.**ApplicationCore**: takes care of our interfaces, business rules and Entities
