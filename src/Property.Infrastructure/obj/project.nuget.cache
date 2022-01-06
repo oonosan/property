@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8WDLS8LBgfY2U5QhVFGC/eMd+r7o0buQ1uq3WXT+RrkSCXXM4ptyTHVgjMfif1HNAfp+c8Jm5gL3KpTFaNYVdg==",
+  "dgSpecHash": "zSYEPWrwAX7bOvqfoed73fn2cQ/dqNvHqBTnepEVB4EDD+Srqg2A7Rt+AIAzFoms7JErEHzJNAlrosSpx+xayQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\onoka\\Documents\\property\\src\\Property.Infrastructure\\Property.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.Infrastructure\\Property.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\onoka\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\onoka\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

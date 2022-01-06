@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iE1RfELU6vjPQGlEy+IyiXmERwiQKGUrP8U72El4AU+UW83CDqXFyHonK1CWdk+XXNeAwkxxZ59jAUBlP2rwnA==",
+  "dgSpecHash": "MDrQ+wNifFvPAQeBBiqldMSVmWs+Xlkd69bUQGfrAQdf/pEGftbh5yU0COOwCtIqWvxE3LlH/N6VGVnlS8Ud6Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\onoka\\Documents\\property\\src\\Property.Services\\Property.Services.csproj",
+  "projectFilePath": "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.Services\\Property.Services.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

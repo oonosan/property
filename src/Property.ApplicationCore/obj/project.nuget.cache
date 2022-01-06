@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "b2MSVjYdDo3AsvJwq1kRyHk0CoLjyz6xU4r4OoYj/4ph84Nfdwxd03A/DQzMN9HupovXiOcJ+2ooxHmag/FrtQ==",
+  "dgSpecHash": "9ZF+xIc20YSl3t0pC4NO+mmALVbZfVpgtz9g9hEmT/zdS1KjBC4Q/vToNmrzhrpN83FduFVPVy7LgZy+BKDp8g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\onoka\\Documents\\property\\src\\Property.ApplicationCore\\Property.ApplicationCore.csproj",
+  "projectFilePath": "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.ApplicationCore\\Property.ApplicationCore.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

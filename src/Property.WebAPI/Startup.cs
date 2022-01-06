@@ -44,7 +44,7 @@ namespace Property.WebAPI
 
             app.UseRouting();
 
-            app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200"));
+            app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200"));
 
             // used to enable authentication and then subsequently allow authorization
             // app.UseAuthentication();

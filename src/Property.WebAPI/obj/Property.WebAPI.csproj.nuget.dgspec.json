@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\onoka\\Documents\\property\\src\\Property.WebAPI\\Property.WebAPI.csproj": {}
+    "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.WebAPI\\Property.WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\onoka\\Documents\\property\\src\\Property.ApplicationCore\\Property.ApplicationCore.csproj": {
+    "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.ApplicationCore\\Property.ApplicationCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\onoka\\Documents\\property\\src\\Property.ApplicationCore\\Property.ApplicationCore.csproj",
+        "projectUniqueName": "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.ApplicationCore\\Property.ApplicationCore.csproj",
         "projectName": "Property.ApplicationCore",
-        "projectPath": "C:\\Users\\onoka\\Documents\\property\\src\\Property.ApplicationCore\\Property.ApplicationCore.csproj",
+        "projectPath": "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.ApplicationCore\\Property.ApplicationCore.csproj",
         "packagesPath": "C:\\Users\\onoka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\onoka\\Documents\\property\\src\\Property.ApplicationCore\\obj\\",
+        "outputPath": "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.ApplicationCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -58,18 +58,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\onoka\\Documents\\property\\src\\Property.Infrastructure\\Property.Infrastructure.csproj": {
+    "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.Infrastructure\\Property.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\onoka\\Documents\\property\\src\\Property.Infrastructure\\Property.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.Infrastructure\\Property.Infrastructure.csproj",
         "projectName": "Property.Infrastructure",
-        "projectPath": "C:\\Users\\onoka\\Documents\\property\\src\\Property.Infrastructure\\Property.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.Infrastructure\\Property.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\onoka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\onoka\\Documents\\property\\src\\Property.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -90,8 +90,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\onoka\\Documents\\property\\src\\Property.ApplicationCore\\Property.ApplicationCore.csproj": {
-                "projectPath": "C:\\Users\\onoka\\Documents\\property\\src\\Property.ApplicationCore\\Property.ApplicationCore.csproj"
+              "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.ApplicationCore\\Property.ApplicationCore.csproj": {
+                "projectPath": "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.ApplicationCore\\Property.ApplicationCore.csproj"
               }
             }
           }
@@ -150,18 +150,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\onoka\\Documents\\property\\src\\Property.WebAPI\\Property.WebAPI.csproj": {
+    "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.WebAPI\\Property.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\onoka\\Documents\\property\\src\\Property.WebAPI\\Property.WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.WebAPI\\Property.WebAPI.csproj",
         "projectName": "Property.WebAPI",
-        "projectPath": "C:\\Users\\onoka\\Documents\\property\\src\\Property.WebAPI\\Property.WebAPI.csproj",
+        "projectPath": "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.WebAPI\\Property.WebAPI.csproj",
         "packagesPath": "C:\\Users\\onoka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\onoka\\Documents\\property\\src\\Property.WebAPI\\obj\\",
+        "outputPath": "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -182,8 +182,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\onoka\\Documents\\property\\src\\Property.Infrastructure\\Property.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\onoka\\Documents\\property\\src\\Property.Infrastructure\\Property.Infrastructure.csproj"
+              "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.Infrastructure\\Property.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.Infrastructure\\Property.Infrastructure.csproj"
               }
             }
           }
@@ -229,6 +229,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.22, 3.1.22]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -237,7 +243,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

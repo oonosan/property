@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fdWGR299pPviXjwb4UzdQ8csq2OnxkLEAmenGgRPIkP4iyoY8VhiLRY45mfnVlW05z54AG9OLU9pV6VMGhkjGQ==",
+  "dgSpecHash": "WWtsYnBpff+ltgnMUFzBP6dOsfZ2LfQZFZwGkOycgSf8fLogx5GhDg9KswZywe376/lsC8tBsn/kF1X6xs2MmA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\onoka\\Documents\\property\\src\\Property.WebAPI\\Property.WebAPI.csproj",
+  "projectFilePath": "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.WebAPI\\Property.WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\onoka\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\onoka\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
@@ -173,7 +173,8 @@
     "C:\\Users\\onoka\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\onoka\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\onoka\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\onoka\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\onoka\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\onoka\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512"
   ],
   "logs": []
 }

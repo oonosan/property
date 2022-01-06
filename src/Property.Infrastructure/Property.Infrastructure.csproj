@@ -9,6 +9,7 @@
     <Folder Include="Data\Seed\" />
     <Folder Include="Data\Repositories\" />
     <Folder Include="Extensions\" />
+    <Folder Include="IoC\" />
     <Folder Include="Logging\" />
   </ItemGroup>
 
