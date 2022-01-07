@@ -30,13 +30,92 @@ Within this solution there are five projects:
 
 
 ## Angular Architecture 
-![Angular Architecture]()
 In Angular we want an unidirectional dataflow. Child components only notify their parent components, the parent (smart component) will send an **action** to a **store** that contains **state**, and that action will update the state for the entire application.
 
-![Unidirectional dataflow]()
+[Ante Burazer](https://netmedia.io/dev/angular-architecture-patterns-high-level-project-architecture_5589) article was used.
 
-A sandbox principle was implemented as [Ante Burazer](https://netmedia.io/dev/angular-architecture-patterns-high-level-project-architecture_5589) described in his article.
-**The sandbox is a way to decouple the presentation layer from the application logic**, but that's not its only responsibility.
+![Angular Architecture](https://github.com/oonosan/property/blob/main/img/Angular%20project%20architecture%20diagram.png?raw=true)
+
+ 1. **Application Core Module**
+ We can call it the root module as well and it’s located in _app/app.module.ts_ file. It describes how the application parts fit together and it’s also the entry point used for launching the application.
+The main tasks for the root module are:
+-   **Imports** all other modules we want to plug in the application**
+-   **Provides** services we want to expose globally inside the application and instantiate only once
+-   **Declares** the application’s root component
+-   **Bootstraps** the root component that Angular creates and inserts it into the _index.html_ host web page
+
+ 2. **Async Services**
+ Are a collection of modules responsible for different types of communication.
+The goal of the HTTP layer is to add headers, manage the request methods, intercept requests, receive the responses, parse them and handle the various types of errors.
+
+ 3. **State Managment**
+[ngrx/store Documentation](https://gist.github.com/btroncone/a6e4347326749f938510)
+We’ll treat our store as a database where each reducer is a table and it represents a slice of state we want to keep track of. The store acts like a relational database where we can use a high level selectors to merge different parts of our state.
+We put our store inside **_app/shared/store/index.ts_** file. It will hold an interface which describes each piece of the store and represents the state from each reducer **_– State_**. This interface is just a map of keys to inner state types. Besides overall state the store contains selector functions to get each little piece of the state and child reducers have no knowledge of the overall state tree.
+On the other hand we are using [ngrx/effects](https://github.com/ngrx/effects/blob/master/docs/intro.md). What are they? Effects relate to the term side effects. It‘s a piece of code which needs to be executed after the ngrx action has been invoked. It’s basically a function which returns an observable. Effects are used for handling async calls for our actions and chaining other actions when async calls end. **_To manipulate with application state we should deal with actions only_**.
+
+  4. **Application Core Facade**
+Application core facade is represented as a sandbox. It is an abstract class which holds common logic of the application core API. We placed it in _app/shared/sandbox/base.sandbox.ts_ file.
+Each presentational module’s sandbox will extend the base sandbox class which will act as an interface and the base class they will inherit from. Here we can define which methods and properties each sandbox instance needs to have.
+
+ 5. **Sandbox**
+Sandbox is a service which extends application core facade and exposes streams of state and connections to the async services. It acts as a mediator and a facade for each presentational module with some extra logic, like serving needed piece of state from the store, providing necessary async services to the UI components, dispatching events.
+We can put it inside the _app/shared/sandbox_ folder, grouped by feature, or place it inside the corresponding presentational module folder. We’ll go with the second option because the sandbox logic is explicitly related to the presentational module we are building it for. This way we’ll have all related logic in one place.
+
+```javascript
+ClientApp/
+├──i18n //folder for multi language 
+└──src
+     └──app/
+	     ├──admin/
+		 |
+		 ├──basic-pages/ 
+		 |  
+		 ├──auth/
+		 |   ├──auth.module.ts
+		 |   ├──auth.page.ts
+		 |   └──auth.sandbox.ts
+		 |
+		 ├──dashboard/
+		 |   ├──dashboard.module.ts
+		 |   ├──dashboard.page.ts
+		 |   └──dashboard.sandbox.ts
+		 |
+		 ├──home/ 
+		 |  
+		 ├──shared/
+		 |   ├──asyncServices/
+		 |   |   └──http/
+		 |   |
+		 |   ├──auth
+		 |   |
+		 |   ├──components
+		 |   |   ├──nav-menu
+		 |   |   └──search-menu
+		 |   |
+		 |   ├──containers/layout
+		 |   |   ├──admin-layout
+		 |   |   ├──renter-layout
+		 |   |   └──tenant-layout
+		 |   |
+		 |   ├──models/
+		 |   |
+		 |   ├──sandbox/
+		 |   |   ├──base.sandbox.ts
+		 |   |
+		 |   ├──store/
+		 |   |   ├──reducers/
+		 |   |   ├──actions/
+		 |   |   ├──effects/
+		 |   |   └──index.ts
+		 |   |
+		 |   └──utilities/		 
+		 |
+		 ├──app.module.ts
+		 ├──app.module-routing.ts
+		 ├──app.component.ts
+		 └──app.sandbox.ts
+```
 
 
 # Entity Framework and PostgreSQL
