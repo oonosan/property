@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Property.Infrastructure\Property.Infrastructure.csproj" />
+    <ProjectReference Include="..\Property.Services\Property.Services.csproj" />
   </ItemGroup>
 
 

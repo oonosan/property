@@ -2802,6 +2802,19 @@
         "runtime": {
           "bin/placeholder/Property.Infrastructure.dll": {}
         }
+      },
+      "Property.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Property.ApplicationCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Property.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Property.Services.dll": {}
+        }
       }
     }
   },
@@ -8931,6 +8944,11 @@
       "type": "project",
       "path": "../Property.Infrastructure/Property.Infrastructure.csproj",
       "msbuildProject": "../Property.Infrastructure/Property.Infrastructure.csproj"
+    },
+    "Property.Services/1.0.0": {
+      "type": "project",
+      "path": "../Property.Services/Property.Services.csproj",
+      "msbuildProject": "../Property.Services/Property.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8939,7 +8957,8 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.20",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.20",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.5",
-      "Property.Infrastructure >= 1.0.0"
+      "Property.Infrastructure >= 1.0.0",
+      "Property.Services >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -8976,6 +8995,9 @@
           "projectReferences": {
             "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.Infrastructure\\Property.Infrastructure.csproj": {
               "projectPath": "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.Infrastructure\\Property.Infrastructure.csproj"
+            },
+            "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.Services\\Property.Services.csproj": {
+              "projectPath": "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.Services\\Property.Services.csproj"
             }
           }
         }
