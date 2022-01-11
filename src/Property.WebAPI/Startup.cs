@@ -1,12 +1,16 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using Property.ApplicationCore.Interfaces.Services;
 using Property.Infrastructure.Data.Context;
+using Property.Infrastructure.Extensions;
 using Property.Services.Services;
+using System.Text;
 
 namespace Property.WebAPI
 {
@@ -25,19 +29,8 @@ namespace Property.WebAPI
             services.AddControllers();
             services.AddCors();
 
-            // Connect to database
-            string connectionString = _config.GetConnectionString("DefaultConnection");
-            services.AddDbContext<PropertyDbContext>(options =>
-            {
-                options.UseNpgsql(connectionString);
-            });
-
-            // AddSingleton: When a Singleton is created/instantiated it doesn't stop until our application stops
-            // AddScoped: is scoped to the lifetime of the HTTP request. When a request comes in and we have a service injected into a particullar controller,
-            //            then a new instance of the service is created and when the request is finished, the service is disposed
-            // AddTransient: the service is going to be created and destroyed as soons as the method is finished. Not quite right for a HTTP request
-            // JWT
-            services.AddScoped<ITokenService, TokenService>();
+            services.AddApplicationServices(_config);
+            services.AddIdentityServices(_config);            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,11 +46,11 @@ namespace Property.WebAPI
 
             app.UseRouting();
 
+            // UseCors must be before UseAuthentication
             app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200"));
 
-            // used to enable authentication and then subsequently allow authorization
-            // app.UseAuthentication();
-
+            // used to enable authentication and then subsequently allow authorization. UseAuthentication must be before UseAuthorization
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

@@ -22,15 +22,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -41,8 +41,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "imports": [
             "net461",
             "net462",
@@ -80,18 +80,21 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {
               "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.ApplicationCore\\Property.ApplicationCore.csproj": {
                 "projectPath": "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.ApplicationCore\\Property.ApplicationCore.csproj"
+              },
+              "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.Services\\Property.Services.csproj": {
+                "projectPath": "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.Services\\Property.Services.csproj"
               }
             }
           }
@@ -103,9 +106,13 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.11, )"
@@ -172,15 +179,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {
               "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.ApplicationCore\\Property.ApplicationCore.csproj": {
                 "projectPath": "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.ApplicationCore\\Property.ApplicationCore.csproj"
@@ -195,8 +202,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
@@ -244,15 +251,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {
               "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.Infrastructure\\Property.Infrastructure.csproj": {
                 "projectPath": "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.Infrastructure\\Property.Infrastructure.csproj"
@@ -270,9 +277,13 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -307,7 +318,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.22, 3.1.22]"
+              "version": "[5.0.13, 5.0.13]"
             }
           ],
           "frameworkReferences": {

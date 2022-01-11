@@ -34,10 +34,10 @@ namespace Property.WebAPI.Controllers
 
             var user = new User
             {
-                Name = "UserName",
-                LastName = "UserLastName",
+                Name = registerDTO.Name,
+                LastName = registerDTO.LastName,
                 Email = registerDTO.Email,
-                Username = registerDTO.Username.ToLower(),
+                UserName = registerDTO.Username.ToLower(),
                 PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerDTO.Password)),
                 PasswordSalt = hmac.Key
             };
@@ -47,7 +47,7 @@ namespace Property.WebAPI.Controllers
 
             return new UserDTO
             {
-                Username = user.Username,
+                UserName = user.UserName,
                 Token = _tokenService.CreateToken(user)
             };
         }
@@ -55,7 +55,7 @@ namespace Property.WebAPI.Controllers
         [HttpPost("login")]
         public async Task<ActionResult<UserDTO>> Login(LoginDTO loginDTO)
         {
-            var user = await _propertyDbContext.Users.FirstOrDefaultAsync(x => x.Username == loginDTO.Username);
+            var user = await _propertyDbContext.Users.SingleOrDefaultAsync(x => x.UserName == loginDTO.Username.ToLower());
 
             if (user == null) return Unauthorized("Invalid username");
 
@@ -69,14 +69,14 @@ namespace Property.WebAPI.Controllers
 
             return new UserDTO
             {
-                Username = user.Username,
+                UserName = user.UserName,
                 Token = _tokenService.CreateToken(user)
             };
         }
 
         private async Task<bool> UserExists(string username)
         {
-            return await _propertyDbContext.Users.AnyAsync(x => x.Username == username.ToLower());
+            return await _propertyDbContext.Users.AnyAsync(x => x.UserName == username.ToLower());
         }
     }
 }

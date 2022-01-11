@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Property.ApplicationCore.Entities;
@@ -20,12 +21,14 @@ namespace Property.WebAPI.Controllers
 
         // GET: api/Users
         [HttpGet]
+        [AllowAnonymous]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
             return await _context.Users.ToListAsync();
         }
 
         // GET: api/users/5
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(int? id)
         {

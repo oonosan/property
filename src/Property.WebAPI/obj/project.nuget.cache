@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "R6ZPMju5dJXcYLKarnZTViXpczZvtcg2fe/Hom9xk7HPUCoHuxxkdOxH5wRIa68Zm1nIn87jkKdMjU9c+tiGng==",
+  "dgSpecHash": "47W06wHOtS3u0DDk+oSQlyLrD+6f063BG5BQkbAO0qjoFI14dYOvcMWOhjNIEfB276EJj7NKXZoJYxcEwfeaSA==",
   "success": true,
   "projectFilePath": "C:\\Users\\onoka\\Documents\\Projects\\property\\src\\Property.WebAPI\\Property.WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\onoka\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\onoka\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.13\\microsoft.aspnetcore.authentication.jwtbearer.5.0.13.nupkg.sha512",
     "C:\\Users\\onoka\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\onoka\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\onoka\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",
@@ -42,8 +43,8 @@
     "C:\\Users\\onoka\\.nuget\\packages\\microsoft.identity.client\\3.0.8\\microsoft.identity.client.3.0.8.nupkg.sha512",
     "C:\\Users\\onoka\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.15.0\\microsoft.identitymodel.jsonwebtokens.6.15.0.nupkg.sha512",
     "C:\\Users\\onoka\\.nuget\\packages\\microsoft.identitymodel.logging\\6.15.0\\microsoft.identitymodel.logging.6.15.0.nupkg.sha512",
-    "C:\\Users\\onoka\\.nuget\\packages\\microsoft.identitymodel.protocols\\5.5.0\\microsoft.identitymodel.protocols.5.5.0.nupkg.sha512",
-    "C:\\Users\\onoka\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\5.5.0\\microsoft.identitymodel.protocols.openidconnect.5.5.0.nupkg.sha512",
+    "C:\\Users\\onoka\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.7.1\\microsoft.identitymodel.protocols.6.7.1.nupkg.sha512",
+    "C:\\Users\\onoka\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.7.1\\microsoft.identitymodel.protocols.openidconnect.6.7.1.nupkg.sha512",
     "C:\\Users\\onoka\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.15.0\\microsoft.identitymodel.tokens.6.15.0.nupkg.sha512",
     "C:\\Users\\onoka\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
     "C:\\Users\\onoka\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
@@ -163,8 +164,7 @@
     "C:\\Users\\onoka\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\onoka\\.nuget\\packages\\system.text.encoding.codepages\\4.5.1\\system.text.encoding.codepages.4.5.1.nupkg.sha512",
     "C:\\Users\\onoka\\.nuget\\packages\\system.text.encoding.extensions\\4.3.0\\system.text.encoding.extensions.4.3.0.nupkg.sha512",
-    "C:\\Users\\onoka\\.nuget\\packages\\system.text.encodings.web\\5.0.0\\system.text.encodings.web.5.0.0.nupkg.sha512",
-    "C:\\Users\\onoka\\.nuget\\packages\\system.text.json\\5.0.0\\system.text.json.5.0.0.nupkg.sha512",
+    "C:\\Users\\onoka\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
     "C:\\Users\\onoka\\.nuget\\packages\\system.text.regularexpressions\\4.3.0\\system.text.regularexpressions.4.3.0.nupkg.sha512",
     "C:\\Users\\onoka\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\onoka\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
@@ -174,7 +174,7 @@
     "C:\\Users\\onoka\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\onoka\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\onoka\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\onoka\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512"
+    "C:\\Users\\onoka\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
   ],
   "logs": []
 }

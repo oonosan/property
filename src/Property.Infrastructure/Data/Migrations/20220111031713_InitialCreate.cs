@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Property.Infrastructure.Data.Migrations
@@ -15,10 +16,10 @@ namespace Property.Infrastructure.Data.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Name = table.Column<string>(type: "text", nullable: true),
                     LastName = table.Column<string>(type: "text", nullable: true),
-                    Username = table.Column<string>(type: "text", nullable: true),
+                    UserName = table.Column<string>(type: "text", nullable: true),
                     Email = table.Column<string>(type: "text", nullable: true),
-                    PasswordHash = table.Column<byte[]>(type: "text", nullable: true),
-                    PasswordSalt = table.Column<byte[]>(type: "text", nullable: true)
+                    PasswordHash = table.Column<byte[]>(type: "bytea", nullable: true),
+                    PasswordSalt = table.Column<byte[]>(type: "bytea", nullable: true)
                 },
                 constraints: table =>
                 {
