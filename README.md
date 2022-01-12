@@ -3,9 +3,9 @@
 Hi! This project is built with .NET Core and Angular.
 
 
-# Architecture
-## Overview
+# Architecture Overview
 A Clean architecture is implemented in this project. The key rule behind Clean Architecture is the Dependency Rule, which states that source code dependencies can only point inwards. The following diagram explains the general structure:
+
 ![Clean Architecture](https://github.com/oonosan/property/blob/main/img/Clean%20architecture.png?raw=true)
 
 The layers have these rules on how they should interact with each other:
@@ -17,6 +17,8 @@ The layers have these rules on how they should interact with each other:
 - **Crossing Boundaries**: At the lower right of the above diagram is an example of how we cross the circle boundaries. It shows the Controllers and Presenters communicating with the Use Cases in the next layer. Note the flow of control. It begins in the controller, moves through the use case, and then winds up executing in the presenter. How do we implement this? “Dependency Inversion Principle”.
 - **Dependency Inversion Principle (DIP)**: This is the D of SOLID. This means that less stable classes and components should depend on more stable ones, and not the other way around. If a stable class depends on an unstable class, then every time the unstable class changes, it will also affect the stable class. So the direction of dependency needs to be inverted. How is this done? By using an abstract class or hiding the stable class behind an interface.
 
+
+## General project structure
 The Onion Architecture was chosen for this project for its maintainability and testability
 ![Onion Layer](https://github.com/oonosan/property/blob/main/img/Clean%20architecture%20layers.png?raw=true)
 
@@ -29,7 +31,7 @@ Within this solution there are five projects:
 - Property.**WebAPI**: controllers
 
 
-## Angular Architecture 
+# Angular Architecture 
 In Angular we want an unidirectional dataflow. Child components only notify their parent components, the parent (smart component) will send an **action** to a **store** that contains **state**, and that action will update the state for the entire application.
 
 [Ante Burazer](https://netmedia.io/dev/angular-architecture-patterns-high-level-project-architecture_5589) article was used.
@@ -83,11 +85,17 @@ ClientApp/
 		 |
 		 ├──home/ 
 		 |  
-		 ├──shared/
+		 ├──not-found/
+		 |  
+		 ├──publication/
+		 |  
+		 ├──my-publications/
+		 |  
+		 ├──shared/ //will host all shared entities that will be provided to every module of the project
 		 |   ├──asyncServices/
 		 |   |   └──http/
 		 |   |
-		 |   ├──auth
+		 |   ├──auth/
 		 |   |
 		 |   ├──components
 		 |   |   ├──nav-menu
@@ -111,7 +119,7 @@ ClientApp/
 		 |   |
 		 |   └──utilities/		 
 		 |
-		 ├──app.module.ts
+		 ├──app.module.ts // Application Core module / root module (1)
 		 ├──app.module-routing.ts
 		 ├──app.component.ts
 		 └──app.sandbox.ts
