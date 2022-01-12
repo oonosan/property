@@ -3,7 +3,7 @@
 Hi! This project is built with .NET Core and Angular.
 
 
-# Architecture Overview
+# Solution Architecture Overview
 A Clean architecture is implemented in this project. The key rule behind Clean Architecture is the Dependency Rule, which states that source code dependencies can only point inwards. The following diagram explains the general structure:
 
 ![Clean Architecture](https://github.com/oonosan/property/blob/main/img/Clean%20architecture.png?raw=true)
@@ -31,10 +31,27 @@ Within this solution there are five projects:
 - Property.**WebAPI**: controllers
 
 
-# Angular Architecture 
-In Angular we want an unidirectional dataflow. Child components only notify their parent components, the parent (smart component) will send an **action** to a **store** that contains **state**, and that action will update the state for the entire application.
+# Angular Architecture Overview
+Articles used for this section:
+- [Ante Burazer - Angular Architecture Patterns ](https://netmedia.io/dev/angular-architecture-patterns-high-level-project-architecture_5589)
+- [Bartosz Pietrucha - Angular Architecture Patterns and Best Practices](https://dev-academy.com/angular-architecture-best-practices/)
 
-[Ante Burazer](https://netmedia.io/dev/angular-architecture-patterns-high-level-project-architecture_5589) article was used.
+## High level project Architecture
+We want to place the proper responsibility into the proper layer: core, abstraction or presentation.
+![High level Abstraction Layers](https://github.com/oonosan/property/blob/main/img/Angular%20project%20architecture%20diagram.png?raw=true)
+
+1. **Core Layer**
+Here is where core application logic is implemented. All data manipulation and outside world communication happen here.
+
+2. **Abstraction Layer**
+This layer exposes the **streams of state** and **interface** for the components in the presentation layer, playing the role of the **facade**. This kind of facade sandboxes what components can see and do in the system. 
+
+3. **Presentation Layer**
+This is the place where all our Angular components live. The only responsibilities of this layer are to present the UI and to delegate user's actions to the core layer, through the abstraction layer.
+
+
+## Detailed project Architecture
+In Angular we want an unidirectional dataflow. Child components only notify their parent components, the parent (smart component) will send an **action** to a **store** that contains **state**, and that action will update the state for the entire application.
 
 ![Angular Architecture](https://github.com/oonosan/property/blob/main/img/Angular%20project%20architecture%20diagram.png?raw=true)
 
@@ -64,6 +81,8 @@ Each presentational module’s sandbox will extend the base sandbox class which 
 Sandbox is a service which extends application core facade and exposes streams of state and connections to the async services. It acts as a mediator and a facade for each presentational module with some extra logic, like serving needed piece of state from the store, providing necessary async services to the UI components, dispatching events.
 We can put it inside the _app/shared/sandbox_ folder, grouped by feature, or place it inside the corresponding presentational module folder. We’ll go with the second option because the sandbox logic is explicitly related to the presentational module we are building it for. This way we’ll have all related logic in one place.
 
+
+## Angular project structure
 ```javascript
 ClientApp/
 ├──i18n //folder for multi language 
