@@ -1,0 +1,191 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10vh;
+  padding: 0 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar .nav-logo {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.navbar .nav-logo .logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
+  margin: 0;
+}
+
+.navbar .nav-menu {
+  position: fixed;
+  right: -110%;
+  top: 10vh;
+  height: 90vh;
+  width: 100vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+}
+
+.navbar .nav-item {
+  list-style: none;
+  margin: 2.5rem 0;
+}
+
+.navbar .nav-link {
+  text-decoration: none;
+  letter-spacing: 0.15rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #F5A9B7;
+}
+
+.navbar .navbar .nav-menu .nav-item .nav-link.active a {
+  color: #F5A9B7;
+}
+
+.navbar .burger-menu {
+  display: block;
+  cursor: pointer;
+}
+
+.navbar .burger-menu div {
+  display: block;
+  width: 1.7rem;
+  height: 0.2rem;
+  margin: 0.3rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+.navbar .nav-menu.active {
+  right: 0;
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Burger lines animation */
+.burger-menu.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.active .bar:nth-child(1) {
+  -webkit-transform: translateY(8px) rotate(45deg);
+          transform: translateY(8px) rotate(45deg);
+}
+
+.burger-menu.active .bar:nth-child(3) {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+          transform: translateY(-8px) rotate(-45deg);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.nav {
+  opacity: 0;
+}
+
+/* ------------- TABLET ------------- */
+@media screen and (min-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 10vh;
+    padding: 0 2rem;
+  }
+  .navbar .nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 50%;
+    text-align: center;
+    height: 10vh;
+    background: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+    border: none;
+  }
+  .navbar .nav-menu.active {
+    right: 0;
+    background: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+    border: none;
+  }
+  .navbar .nav-item {
+    list-style: none;
+    margin: 0;
+  }
+  .navbar .burger-menu {
+    display: none;
+  }
+}
+/*# sourceMappingURL=nav-menu.component.css.map */

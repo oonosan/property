@@ -3,7 +3,7 @@
 Hi! This project is built with .NET Core and Angular.
 
 
-# Solution Architecture Overview
+# 1. Solution Architecture Overview
 A Clean architecture is implemented in this project. The key rule behind Clean Architecture is the Dependency Rule, which states that source code dependencies can only point inwards. The following diagram explains the general structure:
 
 ![Clean Architecture](https://github.com/oonosan/property/blob/main/img/Clean%20architecture.png?raw=true)
@@ -18,7 +18,7 @@ The layers have these rules on how they should interact with each other:
 - **Dependency Inversion Principle (DIP)**: This is the D of SOLID. This means that less stable classes and components should depend on more stable ones, and not the other way around. If a stable class depends on an unstable class, then every time the unstable class changes, it will also affect the stable class. So the direction of dependency needs to be inverted. How is this done? By using an abstract class or hiding the stable class behind an interface.
 
 
-## General project structure
+## 1.1 General project structure
 The Onion Architecture was chosen for this project for its maintainability and testability
 ![Onion Layer](https://github.com/oonosan/property/blob/main/img/Clean%20architecture%20layers.png?raw=true)
 
@@ -31,14 +31,14 @@ Within this solution there are five projects:
 - Property.**WebAPI**: controllers
 
 
-# Angular Architecture Overview
+# 2. Angular Architecture Overview
 Articles used for this section:
 - [Ante Burazer - Angular Architecture Patterns ](https://netmedia.io/dev/angular-architecture-patterns-high-level-project-architecture_5589)
 - [Bartosz Pietrucha - Angular Architecture Patterns and Best Practices](https://dev-academy.com/angular-architecture-best-practices/)
 
-## High level project Architecture
+## 2.1 High level project Architecture
 We want to place the proper responsibility into the proper layer: core, abstraction or presentation.
-![High level Abstraction Layers](https://github.com/oonosan/property/blob/main/img/Angular%20project%20architecture%20diagram.png?raw=true)
+![High level Abstraction Layers](https://github.com/oonosan/property/blob/main/img/High%20level%20abstraction%20layers.png?raw=true)
 
 1. **Core Layer**
 Here is where core application logic is implemented. All data manipulation and outside world communication happen here.
@@ -50,43 +50,57 @@ This layer exposes the **streams of state** and **interface** for the components
 This is the place where all our Angular components live. The only responsibilities of this layer are to present the UI and to delegate user's actions to the core layer, through the abstraction layer.
 
 
-## Detailed project Architecture
+## 2.2 Detailed project Architecture
 In Angular we want an unidirectional dataflow. Child components only notify their parent components, the parent (smart component) will send an **action** to a **store** that contains **state**, and that action will update the state for the entire application.
 
 ![Angular Architecture](https://github.com/oonosan/property/blob/main/img/Angular%20project%20architecture%20diagram.png?raw=true)
 
- 1. **Application Core Module**
+ 1.1 **Application Core Module**
  We can call it the root module as well and it’s located in _app/app.module.ts_ file. It describes how the application parts fit together and it’s also the entry point used for launching the application.
-The main tasks for the root module are:
--   **Imports** all other modules we want to plug in the application**
--   **Provides** services we want to expose globally inside the application and instantiate only once
--   **Declares** the application’s root component
--   **Bootstraps** the root component that Angular creates and inserts it into the _index.html_ host web page
+ The main tasks for the root module are:
+ -   **Imports** all other modules we want to plug in the application**
+ -   **Provides** services we want to expose globally inside the application and instantiate only once
+ -   **Declares** the application’s root component
+ -   **Bootstraps** the root component that Angular creates and inserts it into the _index.html_ host web page
 
- 2. **Async Services**
+ 1.2 **Async Services**
  Are a collection of modules responsible for different types of communication.
-The goal of the HTTP layer is to add headers, manage the request methods, intercept requests, receive the responses, parse them and handle the various types of errors.
+ The goal of the HTTP layer is to add headers, manage the request methods, intercept requests, receive the  responses, parse them and handle the various types of errors.
 
- 3. **State Managment**
-[ngrx/store Documentation](https://gist.github.com/btroncone/a6e4347326749f938510)
-We’ll treat our store as a database where each reducer is a table and it represents a slice of state we want to keep track of. The store acts like a relational database where we can use a high level selectors to merge different parts of our state.
-We put our store inside **_app/shared/store/index.ts_** file. It will hold an interface which describes each piece of the store and represents the state from each reducer **_– State_**. This interface is just a map of keys to inner state types. Besides overall state the store contains selector functions to get each little piece of the state and child reducers have no knowledge of the overall state tree.
-On the other hand we are using [ngrx/effects](https://github.com/ngrx/effects/blob/master/docs/intro.md). What are they? Effects relate to the term side effects. It‘s a piece of code which needs to be executed after the ngrx action has been invoked. It’s basically a function which returns an observable. Effects are used for handling async calls for our actions and chaining other actions when async calls end. **_To manipulate with application state we should deal with actions only_**.
+ 1.3 **State Managment**
+ [ngrx/store Documentation](https://gist.github.com/btroncone/a6e4347326749f938510)
+ We’ll treat our store as a database where each reducer is a table and it represents a slice of state we want to keep track of. The store acts like a relational database where we can use a high level selectors to merge different parts of our state.
+ We put our store inside **_app/shared/store/index.ts_** file. It will hold an interface which describes each piece of the store and represents the state from each reducer **_– State_**. This interface is just a map of keys to inner state types. Besides overall state the store contains selector functions to get each little piece of the state and child reducers have no knowledge of the overall state tree.
+ On the other hand we are using [ngrx/effects](https://github.com/ngrx/effects/blob/master/docs/intro.md). What are they? Effects relate to the term side effects. It‘s a piece of code which needs to be executed after the ngrx action has been invoked. It’s basically a function which returns an observable. Effects are used for handling async calls for our actions and chaining other actions when async calls end. **_To manipulate with application state we should deal with actions only_**.
 
-  4. **Application Core Facade**
-Application core facade is represented as a sandbox. It is an abstract class which holds common logic of the application core API. We placed it in _app/shared/sandbox/base.sandbox.ts_ file.
-Each presentational module’s sandbox will extend the base sandbox class which will act as an interface and the base class they will inherit from. Here we can define which methods and properties each sandbox instance needs to have.
+ 1.4 **Configuration**
+ Global project configuration for different types of environments
 
- 5. **Sandbox**
-Sandbox is a service which extends application core facade and exposes streams of state and connections to the async services. It acts as a mediator and a facade for each presentational module with some extra logic, like serving needed piece of state from the store, providing necessary async services to the UI components, dispatching events.
-We can put it inside the _app/shared/sandbox_ folder, grouped by feature, or place it inside the corresponding presentational module folder. We’ll go with the second option because the sandbox logic is explicitly related to the presentational module we are building it for. This way we’ll have all related logic in one place.
+ 1.5 **Internationalization**
+ Multi language support
+
+ 1.6 **Utility**
+ Set of reusable helper functions and services
+ 
+ 1.7 **Components**
+ Shared components are presentational elements stored in application core layer. Does that sound weird? Well, the application core can hold the presentational elements repeatedly used in the project and provide them to presentational modules to be included as snippets in the template.
+
+ 2. **Application Core Facade**
+ Application core facade is represented as a sandbox. It is an abstract class which holds common logic of the application core API. We placed it in _app/shared/sandbox/base.sandbox.ts_ file.
+ Each presentational module’s sandbox will extend the base sandbox class which will act as an interface and the base class they will inherit from. Here we can define which methods and properties each sandbox instance needs to have.
+
+ 2.1. **Sandbox**
+ Sandbox is a service which extends application core facade and exposes streams of state and connections to the async services. It acts as a mediator and a facade for each presentational module with some extra logic, like serving needed piece of state from the store, providing necessary async services to the UI components, dispatching events.
+ We can put it inside the _app/shared/sandbox_ folder, grouped by feature, or place it inside the corresponding presentational module folder. We’ll go with the second option because the sandbox logic is explicitly related to the presentational module we are building it for. This way we’ll have all related logic in one place.
 
 
-## Angular project structure
+## 2.3 Angular Project Structure
 ```javascript
 ClientApp/
 ├──i18n //folder for multi language 
 └──src
+	 ├──stories/ // Storybook folder where [stories](https://storybook.js.org/docs/angular/get-started/whats-a-story) are saved
+	 |
      └──app/
 	     ├──admin/
 		 |
@@ -136,7 +150,7 @@ ClientApp/
 		 |   |   ├──effects/
 		 |   |   └──index.ts
 		 |   |
-		 |   └──utilities/		 
+		 |   └──utilities/ // It’s used for keeping all commonly used logic and helper functions. 
 		 |
 		 ├──app.module.ts // Application Core module / root module (1)
 		 ├──app.module-routing.ts
@@ -144,6 +158,10 @@ ClientApp/
 		 └──app.sandbox.ts
 ```
 
+
+## 2.4 Libraries
+ - **ngx-bootstrap**: provides Bootstrap components powered by Angular, so you don't need to include original JS components. 
+- **[ngx-parallaxs-scroll](https://www.npmjs.com/package/ngx-parallax-scroll)**: Use in the home page for parallax effect 
 
 # Entity Framework and PostgreSQL
 Entity Framework is used. Is an Object Relational Mapper that translates the code into SQL commands that update our tables in the database.

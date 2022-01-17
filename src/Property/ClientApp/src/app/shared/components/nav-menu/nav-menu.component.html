@@ -1,0 +1,26 @@
+<header>
+    <!-- Navigation Bar -->
+    <nav class="navbar glass-effect">
+        <!-- Image Logo -->
+        <div class="nav-logo">
+            <h1 class="logo"><a href="#home">Property</a></h1>
+        </div>
+
+        <!-- Nav menu -->
+        <ul class="nav-menu" #navMenu>
+            <li class="nav-item">
+                <a class="nav-link projects" href="#projects">Publish</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link contact" href="#contact">Log In</a>
+            </li>
+        </ul>
+
+        <!-- Burger menu -->
+        <div class="burger-menu" #burgerMenu (click)="mobileMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+</header>
