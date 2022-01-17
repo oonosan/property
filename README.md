@@ -2,6 +2,10 @@
 # Real State Project
 Hi! This project is built with .NET Core and Angular.
 
+**Angular Libraries**
+- **[Angular Material]**(https://material.angular.io/): Material Design components for Angular
+- **ngx-bootstrap**: provides Bootstrap components powered by Angular, so you don't need to include original JS components. 
+- **[ngx-parallaxs-scroll](https://www.npmjs.com/package/ngx-parallax-scroll)**: Use in the home page for parallax effect 
 
 # 1. Solution Architecture Overview
 A Clean architecture is implemented in this project. The key rule behind Clean Architecture is the Dependency Rule, which states that source code dependencies can only point inwards. The following diagram explains the general structure:
@@ -158,10 +162,6 @@ ClientApp/
 		 └──app.sandbox.ts
 ```
 
-
-## 2.4 Libraries
- - **ngx-bootstrap**: provides Bootstrap components powered by Angular, so you don't need to include original JS components. 
-- **[ngx-parallaxs-scroll](https://www.npmjs.com/package/ngx-parallax-scroll)**: Use in the home page for parallax effect 
 
 # Entity Framework and PostgreSQL
 Entity Framework is used. Is an Object Relational Mapper that translates the code into SQL commands that update our tables in the database.
