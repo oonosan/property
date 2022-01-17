@@ -3,7 +3,7 @@
 Hi! This project is built with .NET Core and Angular.
 
 **Angular Libraries**
-- **[Angular Material]**(https://material.angular.io/): Material Design components for Angular
+- **[Angular Material](https://material.angular.io/)**: Material Design components for Angular
 - **ngx-bootstrap**: provides Bootstrap components powered by Angular, so you don't need to include original JS components. 
 - **[ngx-parallaxs-scroll](https://www.npmjs.com/package/ngx-parallax-scroll)**: Use in the home page for parallax effect 
 
